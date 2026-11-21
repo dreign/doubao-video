@@ -73,6 +73,14 @@ for _k, _v in E03.LIGHT.items():
 
 STYLE_TAIL = "电影感写实，35mm 胶片颗粒，浅景深，竖构图 9:16，画面中不出现任何文字、字幕、水印"
 
+# 速度档（4b distilled，热跑约 15s/张）只给远景、空镜、无面部大特写的镜用；
+# 面部/近景/物品细节一律留在质量档（9b，热跑约 21-24s/张）。
+FAST_KEYS = {
+    # 只放"远景/俯拍/空镜且画面里没有文字载体（告示、画像、纸片）"的镜；
+    # 实测 4b 会自作主张往纸上写假字、把构图往外景漂，物证镜一律 9b。
+    "01-s02", "01-s06", "01-s09", "01-s10", "01-s11", "02-s02", "02-s10", "02-s12", "03-s02", "03-s18",
+}
+
 
 def build_prompt(key):
     refs = R[key]
@@ -93,6 +101,7 @@ def main():
     keys = [a for a in only if re.fullmatch(r"\d\d-s\d\d", a)]
     eps = [a for a in only if a not in keys]
     force = "--force" in sys.argv
+    FAST_ALL = "--fast" in sys.argv or os.environ.get("IMG_FAST") == "1"
     data = json.load(open(os.path.join(ROOT, "shots.json"), encoding="utf-8"))
     log = json.load(open(LOG, encoding="utf-8")) if os.path.exists(LOG) else {}
     os.makedirs(OLD, exist_ok=True)
@@ -110,8 +119,10 @@ def main():
             if name not in cache:
                 cache[name] = F.upload(os.path.join(REF, name), name)
         t0 = time.time()
+        fast = FAST_ALL or key in FAST_KEYS
         outs, _ = F.edit(build_prompt(key), [cache[n] for n, _ in R[key]],
-                         width=768, height=1344, steps=4, prefix=f"toonflow/fluxshots/{ep}_{sid}")
+                         width=768, height=1344, prefix=f"toonflow/fluxshots/{ep}_{sid}",
+                         model="4b" if fast else "9b")
         o = list(outs.values())[0]["images"][0]
         src = os.path.join(COMFY_OUT, o.get("subfolder", ""), o["filename"])
         dst_dir = os.path.join(ROOT, "03_图片", f"第{ep}集")
@@ -120,9 +131,9 @@ def main():
         if os.path.exists(dst):
             shutil.copy2(dst, os.path.join(OLD, f"ep{ep}_{sid}.png"))
         shutil.copy2(src, dst)
-        log[key] = {"src": src, "secs": round(time.time() - t0, 1)}
+        log[key] = {"src": src, "secs": round(time.time() - t0, 1), "model": "4b" if fast else "9b"}
         json.dump(log, open(LOG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-        print("ok", key, round(time.time() - t0, 1), "s", flush=True)
+        print("ok", key, "4b" if fast else "9b", round(time.time() - t0, 1), "s", flush=True)
 
 
 if __name__ == "__main__":

@@ -89,3 +89,46 @@
 两者交集：Z-Image、Flux2 编辑、H3 i2v；本节新增的：二采、r2v、Director 分组、T8 音频、forloop 批产、RTX 上采样。
 
 
+
+---
+
+## 七、2026-11-22 复扫：目录从 12 份涨到 19 份，新增 7 份逐条判读
+
+重跑 `python scan_workflows.py --json 06_素材\workflows_scan.json`（旧快照留在 `workflows_scan_prev.json`），新增文件与结论：
+
+| 工作流 | 关键结构 | 判读 |
+|---|---|---|
+| `MINIMAX-H3_多图参考生视频.json` | `MiniMaxH3ReferenceToVideo` + 9×`LoadImage`，768×1344 / 124 帧，`BasicScheduler(simple,24)`，**不带 turbo LoRA**，`ref_image_size=match` | 官方口径的多图参考。24 步满血太慢，只适合精修单镜；已按它的节点结构自建 4 步 turbo 版做对比（见 §7.1） |
+| `MINIMAX-H3工作流合集_多流程整合版.json` | 61 节点、3 套管线并置；`MiniMaxH3MultiRateSamplerEXPT8`（多速率采样）+ `MiniMaxH3AudioConditioningT8`（音频条件）+ `minimax_h3_turbo_4步加速` + `qwen3vl_32b nvfp4_awq` | **最值得挖的一份**：`AudioConditioning` 可能是"给定声音生成对应口型/表演"的入口，正好对上短剧台词口型这一痛点。未验证，列为下一轮实验 |
+| `image_flux2_klein_image_edit_4b_distilled.json` | 4b-fp8 + `qwen_3_4b` + `flux2-vae` | 速度档，实测可用，但会往纸上写假字、构图往远景漂（见 §7.2） |
+| `image_flux2_klein_image_edit_9b_base.json` | 9b **base**（非 distilled）+ `qwen_3_8b_fp8mixed` + `full_encoder_small_decoder` | 质量档备选；base 版需要更多步数，本机未测 |
+| `image_flux2_text_to_image_9b.json` | 纯文生图 1024 边长 | **不用**：与本项目"参考图锁形"原则直接冲突 |
+| `image_minimax_h3_image_edit.json` | `minimax_h3_image_pruned_int8` + `qwen3.5_9b_w4a8_gptq` + `qwen3vl_32b`，`KSampler 6` 步，带 `ComfySwitchNode` 开关与自动改写（`TextGenerateV2`） | 语义编辑候选：改服装/改场景可能比 Flux2 更懂"古代服制"。未验证，且要额外加载 20GB 主模型，占显存 |
+| `image_minimax_h3_image_t2i.json` | 同上的文生图分支，`ResolutionSelector 0.4MP` | **不用**，理由同上 |
+
+`▶▷MiniMaxH3-加速视频流整合.json` 仍在，缺 `MiniMax-H3-FL2VA-Q4_K_M.gguf` 与 `Qwen3.5-4B-*.gguf`，本机跑不了的状态不变。
+
+### 7.1 多图参考（R2V）实测：不如首帧 i2v 稳
+
+同一镜 `01-s16`（换蟒袍）三张参考图（青衫全身 + 蟒袍 + 乱葬岗），384×672、turbo 4 步：
+
+| 方案 | 耗时 | 结果 |
+|---|---|---|
+| 首帧 i2v（现用） | 58–68 秒 | 黑金蟒纹、帽翅、站姿与资产一致 |
+| 多图 R2V（3 ref） | 76.4 秒 | 袍子自己长出了彩色刺绣和红内衬，与 `物品_蟒袍.png` 不符；脸被帽子压住看不出 |
+
+结论：**首帧 i2v 仍是主力**。R2V 留给"没有合适首帧、但有 2–3 张角色参考"的新镜（例如第 03 集沈照夜首次对脸），且必须接受它更爱自由发挥。
+
+### 7.2 出图分档实测（同一镜 `01-s10`，768×1344）
+
+| 模型 | 冷启（含加载） | 热跑 | 画面 |
+|---|---|---|---|
+| 9b-fp8 + qwen_3_8b（质量档） | 42.1 秒 | 21–24 秒 | 人物占画面足、脸可用 |
+| 4b-fp8 + qwen_3_4b（速度档） | 18.1 秒 | 约 15 秒 | 乱葬岗坟头更准，但人物缩小、脸糊 |
+| 4b，8 步 | 15.0 秒 | — | 与 4 步差别不大，加步数不划算 |
+
+顺带踩到一个坑：拿 4b 重出 `01-s01`（红榜特写）时，它给红纸自己写了"科考告示"三个假字，构图也漂成了另一种。所以分档规则收紧为：
+
+- **9b 一律用在**：人物特写/近景、告示·画像·纸片·玉玺等"物证镜"、所有定型图。
+- **4b 只用在**：远景、俯拍、空镜，且画面里没有文字载体。
+- 实现：`shots_flux.py` 的 `FAST_KEYS` 白名单（当前 10 个镜号），或整集强制 `--fast` / `IMG_FAST=1`；`flux_shots.json` 会记录每张用的哪个模型。

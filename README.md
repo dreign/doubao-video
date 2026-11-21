@@ -189,6 +189,7 @@ git push
 1. 按 `_comfyui/ENVIRONMENT.md` 起 ComfyUI（`TQDM_DISABLE=1`，8188）。
 2. 把 `06_素材/参考库` 的图放到 ComfyUI `input/`，或直接跑 `shots_flux.py`（它会自己上传）。
 3. `python shots_flux.py 01` 出 18 张分镜图 → `python _apply_ep01.py` 回写 `shots.json`。
-4. `python batch.py videos 01 --proto`（384×672 原型档）或 `--hd`（768×1344）。
+   - 出图分两档：默认 9b（质量档），`FAST_KEYS` 白名单里的远景/空镜自动走 4b（速度档，约快 30%）。别把 4b 用在告示、画像这类带文字的物证镜。
+4. `python batch.py videos 01 --proto`（384×672 原型档，约 18 分钟一集）／ 512×896 审片档 ／ 768×1344 固版（约 78 分钟）。
 5. `python make_docs.py 01` → `python assemble.py 01 --proto`。
 6. 路径是本机绝对路径（`D:\AAA\...`），换机器先改 `pipeline.py` 的 `ROOT` 与 `shots_flux.py` 的 `COMFY_OUT`。

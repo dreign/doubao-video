@@ -16,11 +16,22 @@ def upload(path, name=None):
                                 headers={"Content-Type": f"multipart/form-data; boundary={boundary}"}, method="POST")
     return json.load(urllib.request.urlopen(req, timeout=60))["name"]
 
-def edit(prompt, refs, width=768, height=1344, steps=4, prefix="toonflow/flux2edit"):
+MODELS = {
+    # 9b = 质量档（特写、近景、定型图）；4b = 速度档（远景、空镜、原型批量）
+    "9b": dict(unet="flux-2-klein-9b-fp8.safetensors", clip="qwen_3_8b_fp8mixed.safetensors",
+               vae="full_encoder_small_decoder.safetensors", steps=4),
+    "4b": dict(unet="flux-2-klein-4b-fp8.safetensors", clip="qwen_3_4b.safetensors",
+               vae="flux2-vae.safetensors", steps=4),
+}
+
+
+def edit(prompt, refs, width=768, height=1344, steps=None, prefix="toonflow/flux2edit", model="9b"):
+    cfg = MODELS[model]
+    steps = steps or cfg["steps"]
     graph = {
-        "1": {"class_type": "UNETLoader", "inputs": {"unet_name": "flux-2-klein-9b-fp8.safetensors", "weight_dtype": "default"}},
-        "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": "qwen_3_8b_fp8mixed.safetensors", "type": "flux2", "device": "default"}},
-        "3": {"class_type": "VAELoader", "inputs": {"vae_name": "full_encoder_small_decoder.safetensors"}},
+        "1": {"class_type": "UNETLoader", "inputs": {"unet_name": cfg["unet"], "weight_dtype": "default"}},
+        "2": {"class_type": "CLIPLoader", "inputs": {"clip_name": cfg["clip"], "type": "flux2", "device": "default"}},
+        "3": {"class_type": "VAELoader", "inputs": {"vae_name": cfg["vae"]}},
         "4": {"class_type": "CLIPTextEncode", "inputs": {"text": prompt, "clip": ["2", 0]}},
         "5": {"class_type": "ConditioningZeroOut", "inputs": {"conditioning": ["4", 0]}},
         "6": {"class_type": "EmptyFlux2LatentImage", "inputs": {"width": width, "height": height, "batch_size": 1}},

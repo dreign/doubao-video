@@ -1,6 +1,212 @@
 {
  "user_workflows": [
   {
+   "file": "MINIMAX-H3_多图参考生视频.json",
+   "dir": "user",
+   "format": "ui",
+   "node_count": 32,
+   "top_nodes": [
+    [
+     "LoadImage",
+     9
+    ],
+    [
+     "JjkText",
+     3
+    ],
+    [
+     "VAELoader",
+     2
+    ],
+    [
+     "VAEDecodeAudio",
+     1
+    ],
+    [
+     "VAEDecode",
+     1
+    ],
+    [
+     "KSamplerSelect",
+     1
+    ],
+    [
+     "BasicGuider",
+     1
+    ],
+    [
+     "RandomNoise",
+     1
+    ],
+    [
+     "CreateVideo",
+     1
+    ],
+    [
+     "BasicScheduler",
+     1
+    ],
+    [
+     "SamplerCustomAdvanced",
+     1
+    ],
+    [
+     "UNETLoader",
+     1
+    ],
+    [
+     "ResolutionSelector",
+     1
+    ],
+    [
+     "PrimitiveFloat",
+     1
+    ]
+   ],
+   "models": {
+    "权重": [
+     "minimax_h3_audio_vae_fp32.safetensors",
+     "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+     "minimax_h3_video_vae_fp16.safetensors",
+     "qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
+    ],
+    "UNET": [
+     "minimax_h3_ref2va_pruned_int8_convrot.safetensors"
+    ],
+    "CLIP": [
+     "qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
+    ],
+    "VAE": [
+     "minimax_h3_audio_vae_fp32.safetensors",
+     "minimax_h3_video_vae_fp16.safetensors"
+    ]
+   },
+   "nums": {
+    "steps": [
+     "24"
+    ],
+    "noise_seed": [
+     "622974710466279"
+    ],
+    "denoise": [
+     "1"
+    ],
+    "宽高出现值": [
+     "768",
+     "1344"
+    ]
+   },
+   "has_h3": true,
+   "mtime": 1795281099.078711,
+   "size": 81946
+  },
+  {
+   "file": "MINIMAX-H3工作流合集_多流程整合版.json",
+   "dir": "user",
+   "format": "ui",
+   "node_count": 61,
+   "top_nodes": [
+    [
+     "VAELoader",
+     6
+    ],
+    [
+     "LoadImage",
+     4
+    ],
+    [
+     "PrimitiveStringMultiline",
+     3
+    ],
+    [
+     "CLIPLoader",
+     3
+    ],
+    [
+     "BasicGuider",
+     3
+    ],
+    [
+     "RandomNoise",
+     3
+    ],
+    [
+     "SamplerCustomAdvanced",
+     3
+    ],
+    [
+     "PrimitiveFloat",
+     3
+    ],
+    [
+     "ComfyMathExpression",
+     3
+    ],
+    [
+     "MiniMaxH3AVDecodeT8",
+     3
+    ],
+    [
+     "MiniMaxH3MultiRateSamplerEXPT8",
+     3
+    ],
+    [
+     "VHS_VideoCombine",
+     3
+    ],
+    [
+     "MiniMaxH3AudioConditioningT8",
+     3
+    ],
+    [
+     "UNETLoader",
+     3
+    ]
+   ],
+   "models": {
+    "权重": [
+     "minimax_h3_audio_vae_fp32.safetensors",
+     "minimax_h3_fl2va_int8_convrot.safetensors",
+     "minimax_h3_turbo_4步加速_comfyui.safetensors",
+     "minimax_h3_video_vae_fp16.safetensors",
+     "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"
+    ],
+    "UNET": [
+     "minimax_h3_fl2va_int8_convrot.safetensors"
+    ],
+    "CLIP": [
+     "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"
+    ],
+    "VAE": [
+     "minimax_h3_audio_vae_fp32.safetensors",
+     "minimax_h3_video_vae_fp16.safetensors"
+    ],
+    "LoRA": [
+     "minimax_h3_turbo_4步加速_comfyui.safetensors"
+    ]
+   },
+   "nums": {
+    "shift_video": [
+     "12"
+    ],
+    "shift_audio": [
+     "3"
+    ],
+    "noise_seed": [
+     "123456789"
+    ],
+    "宽高出现值": [
+     "640",
+     "768",
+     "1152",
+     "1344"
+    ]
+   },
+   "has_h3": true,
+   "mtime": 1795281095.9598882,
+   "size": 118598
+  },
+  {
    "file": "audio_minimax_music_3.json",
    "dir": "user",
    "format": "ui",
@@ -140,6 +346,130 @@
    "size": 36420
   },
   {
+   "file": "image_flux2_klein_image_edit_4b_distilled.json",
+   "dir": "user",
+   "format": "ui",
+   "node_count": 7,
+   "top_nodes": [
+    [
+     "SaveImage",
+     2
+    ],
+    [
+     "LoadImage",
+     2
+    ],
+    [
+     "MarkdownNote",
+     1
+    ],
+    [
+     "65c22b29-59aa-496b-89c6-55a603658670",
+     1
+    ],
+    [
+     "7b34ab90-36f9-45ba-a665-71d418f0df18",
+     1
+    ]
+   ],
+   "models": {
+    "权重": [
+     "flux-2-klein-4b-fp8.safetensors",
+     "flux2-vae.safetensors",
+     "qwen_3_4b.safetensors"
+    ],
+    "UNET": [
+     "flux-2-klein-4b-fp8.safetensors"
+    ],
+    "CLIP": [
+     "qwen_3_4b.safetensors"
+    ],
+    "VAE": [
+     "flux2-vae.safetensors"
+    ]
+   },
+   "nums": {
+    "steps": [
+     "4"
+    ],
+    "cfg": [
+     "1"
+    ],
+    "noise_seed": [
+     "43301611940728",
+     "786795143695419"
+    ],
+    "宽高出现值": [
+     "1024"
+    ]
+   },
+   "has_h3": false,
+   "mtime": 1795280057.531656,
+   "size": 58078
+  },
+  {
+   "file": "image_flux2_klein_image_edit_9b_base.json",
+   "dir": "user",
+   "format": "ui",
+   "node_count": 7,
+   "top_nodes": [
+    [
+     "SaveImage",
+     2
+    ],
+    [
+     "LoadImage",
+     2
+    ],
+    [
+     "MarkdownNote",
+     1
+    ],
+    [
+     "65c22b29-59aa-496b-89c6-55a603658670",
+     1
+    ],
+    [
+     "7b34ab90-36f9-45ba-a665-71d418f0df18",
+     1
+    ]
+   ],
+   "models": {
+    "权重": [
+     "flux-2-klein-base-9b-fp8.safetensors",
+     "full_encoder_small_decoder.safetensors",
+     "qwen_3_8b_fp8mixed.safetensors"
+    ],
+    "UNET": [
+     "flux-2-klein-base-9b-fp8.safetensors"
+    ],
+    "CLIP": [
+     "qwen_3_8b_fp8mixed.safetensors"
+    ],
+    "VAE": [
+     "full_encoder_small_decoder.safetensors"
+    ]
+   },
+   "nums": {
+    "steps": [
+     "20"
+    ],
+    "cfg": [
+     "5"
+    ],
+    "noise_seed": [
+     "86928255107192",
+     "192774551144773"
+    ],
+    "宽高出现值": [
+     "1024"
+    ]
+   },
+   "has_h3": false,
+   "mtime": 1795279884.8898387,
+   "size": 55037
+  },
+  {
    "file": "image_flux2_klein_image_edit_9b_distilled.json",
    "dir": "user",
    "format": "ui",
@@ -177,6 +507,217 @@
    "has_h3": false,
    "mtime": 1786218222.3130827,
    "size": 50507
+  },
+  {
+   "file": "image_flux2_text_to_image_9b.json",
+   "dir": "user",
+   "format": "ui",
+   "node_count": 3,
+   "top_nodes": [
+    [
+     "SaveImage",
+     1
+    ],
+    [
+     "MarkdownNote",
+     1
+    ],
+    [
+     "7b34ab90-36f9-45ba-a665-71d418f0df18",
+     1
+    ]
+   ],
+   "models": {
+    "权重": [
+     "flux-2-klein-base-9b-fp8.safetensors",
+     "full_encoder_small_decoder.safetensors",
+     "qwen_3_8b_fp8mixed.safetensors"
+    ],
+    "UNET": [
+     "flux-2-klein-base-9b-fp8.safetensors"
+    ],
+    "CLIP": [
+     "qwen_3_8b_fp8mixed.safetensors"
+    ],
+    "VAE": [
+     "full_encoder_small_decoder.safetensors"
+    ]
+   },
+   "nums": {
+    "steps": [
+     "20"
+    ],
+    "cfg": [
+     "5"
+    ],
+    "noise_seed": [
+     "145965955694731"
+    ],
+    "宽高出现值": [
+     "1024"
+    ]
+   },
+   "has_h3": false,
+   "mtime": 1795279937.7210603,
+   "size": 23779
+  },
+  {
+   "file": "image_minimax_h3_image_edit.json",
+   "dir": "user",
+   "format": "ui",
+   "node_count": 27,
+   "top_nodes": [
+    [
+     "MarkdownNote",
+     4
+    ],
+    [
+     "PrimitiveStringMultiline",
+     3
+    ],
+    [
+     "CLIPLoader",
+     2
+    ],
+    [
+     "ResizeImageMaskNode",
+     2
+    ],
+    [
+     "SaveImage",
+     1
+    ],
+    [
+     "UNETLoader",
+     1
+    ],
+    [
+     "VAELoader",
+     1
+    ],
+    [
+     "MiniMaxH3ImageConditioning",
+     1
+    ],
+    [
+     "ConditioningZeroOut",
+     1
+    ],
+    [
+     "TextGenerateV2",
+     1
+    ],
+    [
+     "PreviewAny",
+     1
+    ],
+    [
+     "KSampler",
+     1
+    ],
+    [
+     "StringReplace",
+     1
+    ],
+    [
+     "ComfySwitchNode",
+     1
+    ]
+   ],
+   "models": {
+    "权重": [
+     "minimax_h3_image_pruned_int8_convrot.safetensors",
+     "minimax_h3_image_vae_fp16.safetensors",
+     "qwen3.5_9b_w4a8_gptq.safetensors",
+     "qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
+    ],
+    "UNET": [
+     "minimax_h3_image_pruned_int8_convrot.safetensors"
+    ],
+    "CLIP": [
+     "qwen3.5_9b_w4a8_gptq.safetensors",
+     "qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
+    ],
+    "VAE": [
+     "minimax_h3_image_vae_fp16.safetensors"
+    ]
+   },
+   "nums": {
+    "steps": [
+     "6"
+    ],
+    "cfg": [
+     "1"
+    ],
+    "denoise": [
+     "1"
+    ],
+    "宽高出现值": [
+     "3104"
+    ]
+   },
+   "has_h3": true,
+   "mtime": 1795279803.2704167,
+   "size": 105438
+  },
+  {
+   "file": "image_minimax_h3_image_t2i.json",
+   "dir": "user",
+   "format": "ui",
+   "node_count": 5,
+   "top_nodes": [
+    [
+     "MarkdownNote",
+     2
+    ],
+    [
+     "SaveImage",
+     1
+    ],
+    [
+     "ResolutionSelector",
+     1
+    ],
+    [
+     "b350fbfc-0ff8-4af1-8d09-09f50d84fcaa",
+     1
+    ]
+   ],
+   "models": {
+    "权重": [
+     "minimax_h3_image_pruned_int8_convrot.safetensors",
+     "minimax_h3_image_vae_fp16.safetensors",
+     "qwen3.5_9b_w4a8_gptq.safetensors",
+     "qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
+    ],
+    "UNET": [
+     "minimax_h3_image_pruned_int8_convrot.safetensors"
+    ],
+    "CLIP": [
+     "qwen3.5_9b_w4a8_gptq.safetensors",
+     "qwen3vl_32b_minimax_h3_int8_convrot.safetensors"
+    ],
+    "VAE": [
+     "minimax_h3_image_vae_fp16.safetensors"
+    ]
+   },
+   "nums": {
+    "steps": [
+     "6"
+    ],
+    "cfg": [
+     "1"
+    ],
+    "denoise": [
+     "1"
+    ],
+    "宽高出现值": [
+     "3104"
+    ]
+   },
+   "has_h3": false,
+   "mtime": 1795279739.719605,
+   "size": 67038
   },
   {
    "file": "image_z_image_turbo.json",
@@ -379,7 +920,7 @@
     ]
    },
    "has_h3": false,
-   "mtime": 1795275409.4483018,
+   "mtime": 1795279761.7026315,
    "size": 44436
   },
   {
