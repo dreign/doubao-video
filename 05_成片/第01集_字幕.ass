@@ -1,0 +1,29 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 768
+PlayResY: 1344
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,52,&H00FFFFFF,&H000000FF,&H00000000,&H64000000,0,0,0,0,100,100,1,0,1,2.5,1.2,2,40,40,100,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.40,0:00:04.87,Default,,0,0,0,,会元陈知白，着即通缉
+Dialogue: 0,0:00:05.57,0:00:10.04,Default,,0,0,0,,三天前，我还在这榜下笑
+Dialogue: 0,0:00:10.74,0:00:15.21,Default,,0,0,0,,三年寒窑，砚台结冰
+Dialogue: 0,0:00:15.91,0:00:20.38,Default,,0,0,0,,墙里是梦，墙外是我这种人
+Dialogue: 0,0:00:21.08,0:00:25.55,Default,,0,0,0,,在那边！
+Dialogue: 0,0:00:26.25,0:00:30.72,Default,,0,0,0,,连画都懒得画准
+Dialogue: 0,0:00:31.42,0:00:35.89,Default,,0,0,0,,考场门都没进，成了逃犯
+Dialogue: 0,0:00:36.59,0:00:41.06,Default,,0,0,0,,你们要这张纸，拿去
+Dialogue: 0,0:00:46.93,0:00:51.40,Default,,0,0,0,,那件青衫，是有人送来的
+Dialogue: 0,0:00:52.10,0:00:56.57,Default,,0,0,0,,脚印到这儿就断了。
+Dialogue: 0,0:00:57.27,0:01:01.74,Default,,0,0,0,,往西追！
+Dialogue: 0,0:01:02.44,0:01:06.91,Default,,0,0,0,,什么玩意儿……
+Dialogue: 0,0:01:07.61,0:01:12.08,Default,,0,0,0,,蟒……蟒袍。
+Dialogue: 0,0:01:12.78,0:01:17.25,Default,,0,0,0,,断口是刀切的
+Dialogue: 0,0:01:17.95,0:01:22.42,Default,,0,0,0,,大小正好，像给我做的
+Dialogue: 0,0:01:28.29,0:01:32.76,Default,,0,0,0,,陈知白死了。本官要进城。
