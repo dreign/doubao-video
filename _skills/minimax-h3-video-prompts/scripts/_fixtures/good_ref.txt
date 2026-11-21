@@ -1,0 +1,21 @@
+subject_definitions:
+<Subject 1> is the young scholar in <Picture 1>, with a thin build, a blue-grey linen robe, and a topknot.
+<Subject 2> is the inn room in <Picture 2>, with a square wooden table, two benches, a candle stand, and a gray plaster wall.
+
+summary:
+[reference generation] The target video shows <Subject 1> rehearsing an official tone inside <Subject 2> before a woman in red knocks.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - his face, robe, and hair are retained.
+<Subject 2> (appears in [Shot 1]): partially_preserved - the table and candle are retained while camera angle changes.
+
+detailed_description:
+Cinematic, live-action, warm candlelight with soft falloff.
+[Shot 1] A medium shot establishes <Subject 2>, the inn room, and <Subject 1>, who stands before a small bronze mirror and straightens his hat. The camera holds a static shot as he opens his mouth without sound.
+[Shot 2] At 00:03.000, the shot cuts to a close-up of his throat as the word finally comes out, thin and unsteady.
+
+overall_soundscape:
+A candle wick crackles softly over a quiet room tone, with fabric shifting as he adjusts his sleeves.
+
+non_diegetic_music:
+Sparse low strings at a slow tempo, fading before the cut.

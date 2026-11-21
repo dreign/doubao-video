@@ -1,0 +1,18 @@
+skip 01-s01
+skip 01-s02
+skip 01-s03
+skip 01-s04
+skip 01-s05
+skip 01-s06
+skip 01-s07
+skip 01-s08
+skip 01-s09
+ok 01-s10 15.0 s
+ok 01-s11 15.0 s
+ok 01-s12 15.1 s
+ok 01-s13 24.1 s
+ok 01-s14 15.1 s
+ok 01-s15 12.0 s
+ok 01-s16 24.1 s
+ok 01-s17 18.1 s
+ok 01-s18 15.0 s

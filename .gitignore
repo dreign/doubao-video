@@ -1,0 +1,20 @@
+# 媒体与大件不进仓库（体积约 700MB，需要时用 LFS 单独推）
+*.mp4
+*.mov
+*.mkv
+*.wav
+
+# 中间产物 / 旧版 / 抽帧对比，非流程必需
+06_素材/旧_文生图版/
+06_素材/bench/
+06_素材/check_*/
+_tmp_out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 系统噪音
+Thumbs.db
+desktop.ini

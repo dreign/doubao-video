@@ -1,0 +1,7 @@
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
+
+integrated_multimodal_description: [Shot 1] Cinematic, live-action, the young man in dark official robes shown in <Picture 1> remains before the city gate, preserving his face, robe pattern, and hat shape. The camera pushes in with small amplitude at slow speed as he lifts his gaze. The guard (S1) shouts in a rough voice, <d>[Chinese] 站住！</d> while his spear tip stays at the man's throat.
+
+overall_soundscape: Cold morning wind sweeps through the gate arch. Iron spear shafts scrape against leather armor, followed by a single heavy swallow.
+
+non_diegetic_music: N/A

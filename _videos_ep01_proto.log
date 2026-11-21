@@ -1,0 +1,38 @@
+[vid] backend=direct res=384x672 proto=True
+[h3] 384x672 124f steps=4 68.3s
+[vid] proto_ep01_s01 ok  1.1min
+[h3] 384x672 124f steps=4 56.5s
+[vid] proto_ep01_s02 ok  2.1min
+[h3] 384x672 124f steps=4 56.5s
+[vid] proto_ep01_s03 ok  3.0min
+[h3] 384x672 124f steps=4 56.2s
+[vid] proto_ep01_s04 ok  4.0min
+[h3] 384x672 124f steps=4 58.4s
+[vid] proto_ep01_s05 ok  4.9min
+[h3] 384x672 124f steps=4 58.2s
+[vid] proto_ep01_s06 ok  5.9min
+[h3] 384x672 124f steps=4 56.6s
+[vid] proto_ep01_s07 ok  6.9min
+[h3] 384x672 124f steps=4 58.2s
+[vid] proto_ep01_s08 ok  7.8min
+[h3] 384x672 124f steps=4 58.2s
+[vid] proto_ep01_s09 ok  8.8min
+[h3] 384x672 124f steps=4 58.2s
+[vid] proto_ep01_s10 ok  9.8min
+[h3] 384x672 124f steps=4 60.2s
+[vid] proto_ep01_s11 ok  10.8min
+[h3] 384x672 124f steps=4 60.3s
+[vid] proto_ep01_s12 ok  11.8min
+[h3] 384x672 124f steps=4 56.3s
+[vid] proto_ep01_s13 ok  12.7min
+[h3] 384x672 124f steps=4 58.2s
+[vid] proto_ep01_s14 ok  13.7min
+[h3] 384x672 124f steps=4 58.4s
+[vid] proto_ep01_s15 ok  14.7min
+[h3] 384x672 124f steps=4 58.3s
+[vid] proto_ep01_s16 ok  15.6min
+[h3] 384x672 124f steps=4 58.7s
+[vid] proto_ep01_s17 ok  16.6min
+[h3] 384x672 124f steps=4 60.3s
+[vid] proto_ep01_s18 ok  17.6min
+done videos 01 17.6 min
