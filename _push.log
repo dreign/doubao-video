@@ -2,3 +2,17 @@ error: RPC failed; curl 55 Send failure: Connection was reset
 send-pack: unexpected disconnect while reading sideband packet
 fatal: the remote end hung up unexpectedly
 Everything up-to-date
+To https://github.com/dreign/doubao-video.git
+   c7c023e..4b07813  main -> main
+To https://github.com/dreign/doubao-video.git
+   4b07813..25795ce  main -> main
+To https://github.com/dreign/doubao-video.git
+   25795ce..a47adf0  main -> main
+fatal: unable to access 'https://github.com/dreign/doubao-video.git/': Recv failure: Connection was reset
+fatal: unable to access 'https://github.com/dreign/doubao-video.git/': Recv failure: Connection was reset
+fatal: unable to access 'https://github.com/dreign/doubao-video.git/': Failed to connect to github.com:443 after 21085 ms: Could not connect to server
+fatal: unable to access 'https://github.com/dreign/doubao-video.git/': Recv failure: Connection was reset
+fatal: unable to access 'https://github.com/dreign/doubao-video.git/': Recv failure: Connection was reset
+fatal: unable to access 'https://github.com/dreign/doubao-video.git/': Failed to connect to github.com:443 after 21098 ms: Could not connect to server
+To https://github.com/dreign/doubao-video.git
+   a47adf0..8d5dc95  main -> main

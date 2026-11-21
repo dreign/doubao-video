@@ -1,0 +1,218 @@
+{
+  "01-s01": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s01_00003_.png",
+    "secs": 21.1
+  },
+  "01-s02": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s02_00003_.png",
+    "secs": 18.1
+  },
+  "01-s03": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s03_00003_.png",
+    "secs": 27.1
+  },
+  "01-s04": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s04_00003_.png",
+    "secs": 21.1
+  },
+  "01-s05": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s05_00003_.png",
+    "secs": 15.3
+  },
+  "01-s06": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s06_00003_.png",
+    "secs": 12.1
+  },
+  "01-s07": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s07_00003_.png",
+    "secs": 15.1
+  },
+  "01-s08": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s08_00008_.png",
+    "secs": 21.1
+  },
+  "01-s09": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s09_00003_.png",
+    "secs": 33.1
+  },
+  "01-s10": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s10_00003_.png",
+    "secs": 24.1
+  },
+  "01-s11": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s11_00002_.png",
+    "secs": 21.0
+  },
+  "01-s12": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s12_00002_.png",
+    "secs": 15.1
+  },
+  "01-s13": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s13_00001_.png",
+    "secs": 24.1
+  },
+  "01-s14": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s14_00003_.png",
+    "secs": 33.1
+  },
+  "01-s15": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s15_00001_.png",
+    "secs": 12.0
+  },
+  "01-s16": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s16_00004_.png",
+    "secs": 30.1
+  },
+  "01-s17": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s17_00006_.png",
+    "secs": 27.1
+  },
+  "01-s18": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\01_s18_00004_.png",
+    "secs": 24.1
+  },
+  "02-s01": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s01_00007_.png",
+    "secs": 18.0
+  },
+  "02-s02": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s02_00003_.png",
+    "secs": 15.1
+  },
+  "02-s03": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s03_00003_.png",
+    "secs": 33.1
+  },
+  "02-s04": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s04_00003_.png",
+    "secs": 18.0
+  },
+  "02-s05": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s05_00003_.png",
+    "secs": 18.1
+  },
+  "02-s06": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s06_00003_.png",
+    "secs": 18.1
+  },
+  "02-s07": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s07_00003_.png",
+    "secs": 36.1
+  },
+  "02-s08": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s08_00003_.png",
+    "secs": 18.1
+  },
+  "02-s09": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s09_00003_.png",
+    "secs": 24.1
+  },
+  "02-s10": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s10_00001_.png",
+    "secs": 18.0
+  },
+  "02-s11": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s11_00002_.png",
+    "secs": 21.1
+  },
+  "02-s12": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s12_00001_.png",
+    "secs": 18.0
+  },
+  "02-s13": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s13_00001_.png",
+    "secs": 24.4
+  },
+  "02-s14": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s14_00001_.png",
+    "secs": 18.1
+  },
+  "02-s15": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s15_00001_.png",
+    "secs": 12.1
+  },
+  "02-s16": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s16_00001_.png",
+    "secs": 24.1
+  },
+  "02-s17": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s17_00001_.png",
+    "secs": 42.1
+  },
+  "02-s18": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\02_s18_00003_.png",
+    "secs": 24.1
+  },
+  "03-s01": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s01_00003_.png",
+    "secs": 24.0
+  },
+  "03-s02": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s02_00004_.png",
+    "secs": 18.0
+  },
+  "03-s03": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s03_00003_.png",
+    "secs": 21.1
+  },
+  "03-s04": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s04_00003_.png",
+    "secs": 18.1
+  },
+  "03-s05": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s05_00003_.png",
+    "secs": 21.1
+  },
+  "03-s06": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s06_00003_.png",
+    "secs": 18.1
+  },
+  "03-s07": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s07_00004_.png",
+    "secs": 18.1
+  },
+  "03-s08": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s08_00004_.png",
+    "secs": 15.4
+  },
+  "03-s09": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s09_00003_.png",
+    "secs": 18.4
+  },
+  "03-s10": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s10_00001_.png",
+    "secs": 18.1
+  },
+  "03-s11": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s11_00001_.png",
+    "secs": 24.1
+  },
+  "03-s12": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s12_00001_.png",
+    "secs": 24.1
+  },
+  "03-s13": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s13_00001_.png",
+    "secs": 33.1
+  },
+  "03-s14": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s14_00001_.png",
+    "secs": 27.4
+  },
+  "03-s15": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s15_00001_.png",
+    "secs": 21.0
+  },
+  "03-s16": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s16_00001_.png",
+    "secs": 21.1
+  },
+  "03-s17": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s17_00002_.png",
+    "secs": 15.1
+  },
+  "03-s18": {
+    "src": "C:\\Users\\Administrator\\ComfyUI-Shared\\output\\toonflow\\fluxshots\\03_s18_00002_.png",
+    "secs": 21.1
+  }
+}
